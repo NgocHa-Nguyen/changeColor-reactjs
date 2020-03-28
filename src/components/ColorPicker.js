@@ -11,8 +11,8 @@ class ColorPicker extends Component {
             backgroundColor: color
         }
     }
-    setActiveColor(){
-        this.props.onReceiveColor(color);
+    setActiveColor(color){
+        this.props.onReceiveColor(color);//cha khai bao
     }
     render() {
         var elmColoers = this.state.colors.map((color, index) => {
@@ -26,12 +26,11 @@ class ColorPicker extends Component {
                     </div>
                     <div className="panel-body">
                         {elmColoers}
-                        <span onClick={() => this.setActiveColor(color)}></span>
                         <hr />
                     </div>
                 </div>
             </div>
-        );
+        );  
     }
 }
 
